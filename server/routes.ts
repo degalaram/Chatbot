@@ -6,7 +6,7 @@ import { ZodError } from "zod";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || process.env.OPEN_API_KEY,
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
